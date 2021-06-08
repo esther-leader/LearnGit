@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EJS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+    <% if(data.loggedIn) %>
+    <h2> <%= data.userName %> </h2>
+    <h1>searched for <%=data.searchQuery %></h1>
+    <ul>
+        <% data.searchResults.forEach(result =>{ %>
+        <li><%=result %></li>
+        <% }) %>
+    </ul>
+
+</body>
+
+</html>
